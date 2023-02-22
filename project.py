@@ -11,10 +11,9 @@ import time
 from urllib.request import Request
 
 
-# ## PART 1.2
-# 
+## PART 1
 
-# ### (a)
+### (a)
 
 
 url_sold = "https://www.ebay.com/sch/i.html?_from=R40&_nkw=amazon+gift+card&_sacat=0&LH_Sold=1&rt=nc&_pgn=1" # URL for sold "amazon gift card"
@@ -26,7 +25,7 @@ f.write(webcontent_sold) # wite "webcontent_sold" in the file
 f.close() #Close the opening file
 
 
-# ### (b)
+### (b)
 
 
 for i in range(1,11):
@@ -40,7 +39,7 @@ for i in range(1,11):
     time.sleep(10)# make sure each page request is followed by a 10 second pause
 
 
-# ### (c)
+### (c)
 
 
 for i in range (1,11):
@@ -50,7 +49,7 @@ for i in range (1,11):
         
 
 
-# ### (d)
+### (d)
 
 
 for i in range (1,11):
@@ -69,7 +68,7 @@ for i in range (1,11):
                 print("Item title:",title.text,'\n'+"Pice:",price.text+'\n'+"Shipping price:"+shipping)
 
 
-# ### (e)
+### (e)
 
 for i in range (1,11):
     with open (f'amazon_gift_card_{i}.htm') as file:
@@ -111,14 +110,14 @@ for i in range (1,11):
                     print("face price:" , face_value, "selling price:", selling_price, "price:", price_num, "shipping:",  shipping_num)
                 
                 
-# ### (f)
+### (f)
 print("Gift card with face value under 100 are more possible to be sold above face value."+'\n'+
       "I think the reason might be people might have a eBay gift card, but they think things in Amazon are better than eBay."+'\n'+
       "Hencen, they would like to use the eBay gift card to buy a Amazon one, and people are might be more likely to have a under $100 eBay gift card")
 
-# ## Part 2.2
+## Part 2.2
 
-# ### (a)
+### (a)
 
 
 url_fctable = "https://www.fctables.com/user/login/"
@@ -138,7 +137,7 @@ print(i)
 print(response)
 
 
-# ### (b) 
+### (b) 
 
 url_2 ="https://www.fctables.com/tipster/my_bets/"
 header={"User-Agent": "Mozilla/5.0"}
